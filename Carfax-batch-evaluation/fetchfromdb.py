@@ -135,7 +135,7 @@ def update_trims_in_db(trim_data):
     print(f"Database updated for {len(trim_data)} records.")
 
 def get_trim(app_no,vin,mileage,token):
-    url = 'https://api.carfax.ca/vindecode/api/v2/SingleVin/SingleVinDecode'
+    url = EndpointSingleVinDecode
     headers = {
         'accept': 'application/json',
         'Authorization': f'Bearer {token}',
@@ -159,7 +159,7 @@ def get_trim(app_no,vin,mileage,token):
         return None
     
 def get_trim_MMY(app_no,Year,Make,Model,Mileage, token):
-    url = 'https://api.carfax.ca/vindecode/api/v2/SingleVin/SingleVinDecode'
+    url = EndpointSingleVInDecode
     headers = {
         'accept': 'application/json',
         'Authorization': f'Bearer {token}',
@@ -186,7 +186,7 @@ def get_trim_MMY(app_no,Year,Make,Model,Mileage, token):
         return None
 
 def fetch_vehicle_details(labeled_data2, token):
-    url = 'https://api.carfax.ca/vindecode/api/v2/SingleVin/SingleVinDecode'
+    url = EndpointSingleVinDecode
     headers = {
         'accept': 'application/json',
         'Authorization': f'Bearer {token}',
@@ -239,7 +239,7 @@ def fetch_vehicle_details(labeled_data2, token):
     return results
 
 def fetch_vehicle_details_MMY(labeled_data2, token):
-    url = 'https://api.carfax.ca/vindecode/api/v2/SingleVin/SingleVinDecode'
+    url = EndpointSingleVinDecode
     headers = {
         'accept': 'application/json',
         'Authorization': f'Bearer {token}',
@@ -330,7 +330,7 @@ def update_vehicle_details_in_db(conn, vehicle_data):
     print(f"Update complete. {updated_count} rows were updated.")
 
 def fetch_valu(labeled_data3, token):
-    url = 'https://valuationapi.carfax.ca/api/v2/SingleVinValuation/SingleVinValuation'
+    url = EndpointSingleVinValuation
     headers = {
         'accept': 'text/plain',
         'Authorization': f'Bearer {token}',
@@ -394,7 +394,7 @@ def fetch_valu(labeled_data3, token):
     return results
 
 def fetch_valu_MMY(labeled_data3, token):
-    url = 'https://valuationapi.carfax.ca/api/v2/SingleVinValuation/SingleVinValuation'
+    url = EndpointSingleVinValuation
     headers = {
         'accept': 'text/plain',
         'Authorization': f'Bearer {token}',
