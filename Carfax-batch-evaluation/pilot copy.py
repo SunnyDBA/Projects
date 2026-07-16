@@ -40,7 +40,7 @@ logging.basicConfig(filename='Output.txt', level=logging.INFO)
 
 # ffdb.update_add_new_vins()
 
-url = 'https://authentication.carfax.ca/oauth/token'
+url = OathEndpoint
 
 headers = {
     'Content-Type': 'application/x-www-form-urlencoded'
