@@ -10,10 +10,10 @@ import pandas as pd
 
 #FETCH THE VINS I WANT TO LOOK UP
 # Database connection details
-server = 'Wagas.hankeyinvestments.com' #'prodsnapshot'  
-database = 'NLC_CACRSvc' #'CACRSvc_20240808'
-username = credentials.prodsnapshotUser
-password = credentials.prodsnapshotPass
+server = credentials.server
+database = credentials.database
+username = credentials.user
+password = credentials.pass
 
 
 # Setup connection to SQL Server
